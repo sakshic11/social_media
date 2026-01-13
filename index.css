@@ -1,0 +1,267 @@
+/* ================= GLOBAL ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('/images/background.jpg') no-repeat center/cover;
+}
+
+/* ================= HEADER ================= */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-size: 2rem;
+    color: #fff;
+    user-select: none;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.btnLogin-popup:hover {
+    background: #fff;
+    color: #162938;
+}
+
+/* ================= FORM WRAPPER ================= */
+.wrapper {
+    width: 400px;
+    min-height: 500px;
+    height: auto;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 100px; /* push below header */
+}
+
+/* ================= FORM BOX ================= */
+.form-box {
+    width: 100%;
+    padding: 30px;
+    transition: 0.5s ease;
+}
+
+.form-box h2 {
+    font-size: 2rem;
+    color: #162938;
+    text-align: center;
+}
+
+/* Hide registration initially */
+.form-box.register {
+    display: none;
+}
+
+/* ================= INPUT FIELDS ================= */
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 25px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #162938;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -5px;
+    font-size: 0.8rem;
+    color: #162938;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2rem;
+    color: #162938;
+    line-height: 50px;
+}
+
+/* ================= REMEMBER / FORGOT ================= */
+.remember-forgot {
+    font-size: 0.9rem;
+    color: #162938;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 20px 0;
+}
+
+.remember-forgot label input {
+    accent-color: #162938;
+    margin-right: 5px;
+}
+
+.remember-forgot a {
+    color: #162938;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+/* ================= BUTTON ================= */
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #162938;
+    border: 1px solid #162938;
+}
+
+/* ================= LOGIN / REGISTER TEXT ================= */
+.login-register {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-register a {
+    color: #162938;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register a:hover {
+    text-decoration: underline;
+}
+
+/* ================= GENDER ================= */
+.gender-box {
+    color: #162938;
+    margin: 20px 0;
+    font-size: 0.9rem;
+}
+
+.gender-box span {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.gender-box label {
+    margin-right: 15px;
+}
+
+.gender-box input {
+    accent-color: #162938;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 30px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navigation a,
+    .btnLogin-popup {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    .wrapper {
+        width: 90%;
+        margin-top: 120px;
+    }
+}

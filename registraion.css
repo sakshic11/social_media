@@ -1,0 +1,107 @@
+/* Reset and font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body background and center */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container */
+.register-container {
+    width: 400px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Heading */
+.register-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Input box */
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    color: #999;
+    font-size: 14px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: 0.3s;
+    background: #fff;
+    padding: 0 5px;
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label {
+    top: -8px;
+    font-size: 12px;
+    color: #2575fc;
+}
+
+/* Gender */
+.gender-box {
+    margin-bottom: 20px;
+}
+
+.gender-box p {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.gender-box label {
+    margin-right: 15px;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 10px;
+    background: #2575fc;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1a5fd3;
+}
+
+/* Login link */
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-link a {
+    color: #2575fc;
+    text-decoration: none;
+    font-weight: bold;
+}

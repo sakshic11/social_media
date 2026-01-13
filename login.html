@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with Login & Registration</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <!-- LOGIN FORM -->
+        <div class="form-box login">
+            <h2>Login</h2>
+
+            <form>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-open"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <button type="button" class="btn">Login</button>
+
+                <div class="login-register">
+                    <p>Don't have an account?
+                        <a href="#" class="register-link">Register</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+        <!-- REGISTRATION FORM -->
+        <div class="form-box register">
+            <h2>Registration</h2>
+
+            <form>
+                <div class="input-box">
+                    <input type="text" required>
+                    <label>Full Name</label>
+                </div>
+
+                <div class="input-box">
+                    <input type="email" required>
+                    <label>Email ID</label>
+                </div>
+
+                <div class="input-box">
+                    <input type="tel" required>
+                    <label>Contact Number</label>
+                </div>
+
+                <div class="gender-box">
+                    <span>Gender</span>
+                    <label><input type="radio" name="gender"> Male</label>
+                    <label><input type="radio" name="gender"> Female</label>
+                    <label><input type="radio" name="gender"> Other</label>
+                </div>
+
+                <div class="input-box">
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+
+                <div class="input-box">
+                    <input type="password" required>
+                    <label>Confirm Password</label>
+                </div>
+
+                <button type="button" class="btn">Register</button>
+
+                <div class="login-register">
+                    <p>Already have an account?
+                        <a href="./" class="login-link">Login</a>
+                        
+                    </p>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    
